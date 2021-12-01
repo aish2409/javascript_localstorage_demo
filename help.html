@@ -1,0 +1,20 @@
+function login() 
+{
+  var name = document.getElementById("input1").value;
+  var password = document.getElementById("input2").value;
+  let user_array = new Array(); 
+   var a = localStorage.getItem("user");
+  // JSON.parse(localStorage.getItem("user")):[]
+  
+  var b = JSON.parse(a);
+  // debugger
+  if(b.some((v)=>{return v.username==name && v.password==password}))
+  {
+    alert("login successful data");
+    
+  }
+  else{
+    alert("login fail data");
+  }
+}
+
